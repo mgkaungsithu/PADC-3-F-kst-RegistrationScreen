@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
@@ -15,6 +16,19 @@
             app:title="Registration" />
 
     </android.support.design.widget.AppBarLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        >
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
     <android.support.design.widget.TextInputLayout
         android:id="@+id/input_name"
         android:layout_width="match_parent"
@@ -42,7 +56,8 @@
         android:id="@+id/et_phone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Phone"/>
+        android:hint="Phone"
+        android:inputType="number"/>
     </android.support.design.widget.TextInputLayout>
 
     <android.support.design.widget.TextInputLayout
@@ -51,12 +66,13 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:layout_below="@id/input_phone">
+      >
     <EditText
         android:id="@+id/et_email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Email"/>
+        android:hint="Email"
+        android:inputType="textEmailAddress"/>
     </android.support.design.widget.TextInputLayout>
 
     <android.support.design.widget.TextInputLayout
@@ -65,11 +81,13 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:layout_below="@id/input_email">
+       >
     <EditText
         android:id="@+id/et_password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:drawableRight="@drawable/ic_visibility_black_24dp"
+            android:inputType="textPassword"
         android:hint="Password"/>
     </android.support.design.widget.TextInputLayout>
 
@@ -80,12 +98,14 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:layout_below="@id/input_password">
+      >
     <EditText
         android:id="@+id/et_confirm_password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Confirm Password"/>
+        android:hint="Confirm Password"
+        android:drawableRight="@drawable/ic_visibility_black_24dp"
+        android:inputType="textPassword"/>
     </android.support.design.widget.TextInputLayout>
 
     <android.support.design.widget.TextInputLayout
@@ -94,7 +114,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:layout_below="@id/input_confirm_password">
+        >
 
     <EditText
         android:id="@+id/et_address"
@@ -109,14 +129,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="40dp"
-        android:layout_below="@id/input_address"
         android:text="I'm at home"
         />
     <RadioGroup
         android:id="@+id/rb_gender"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/cb_LatLng">
+        android:layout_height="wrap_content">
 
     <RadioButton
         android:id="@+id/rb_male"
@@ -138,14 +156,14 @@
         android:id="@+id/btn_registration"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/rb_gender"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="180dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:text="Registration Finished"
         android:textAllCaps="false"
 
         />
+        </LinearLayout>
 
-
-</RelativeLayout>
+    </ScrollView>
+</android.support.design.widget.CoordinatorLayout>
