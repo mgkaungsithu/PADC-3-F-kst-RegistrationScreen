@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            app:title="Login" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_login_main_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/input_email_or_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="68dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+           >
+        <EditText
+            android:id="@+id/et_email_or_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email or Phone?"
+            android:textColorHint="@color/colorPrimary"
+            />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/input_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="24dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginLeft="24dp"
+            android:layout_below="@id/input_email_or_phone"
+
+            >
+
+        <EditText
+            android:id="@+id/et_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableRight="@drawable/ic_visibility_black_24dp"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:textColorHint="@color/colorPrimary"
+            />
+         </android.support.design.widget.TextInputLayout>
+
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Login"
+            android:layout_below="@id/input_password"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/colorPrimary"
+            android:textColor="@color/colorwhite"
+            android:textAllCaps="false"
+            android:foreground="@drawable/ripple_white"/>
+
+        <TextView
+            android:id="@+id/btn_forget_pw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_alignRight="@+id/btn_login"
+            android:layout_below="@+id/btn_login"
+            android:layout_marginTop="24dp"
+            android:text="@string/btn_forgot_password"
+            android:textColor="@color/colorPrimary"
+            android:foreground="@drawable/ripple_primary"
+            android:padding="8dp"/>
+        <View
+            android:id="@+id/v_separator"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#AAA"
+            android:layout_below="@id/btn_forget_pw"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:foreground="@drawable/ripple_primary"/>
+        <TextView
+            android:id="@+id/btn_New_Seller"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_alignRight="@+id/v_separator"
+            android:layout_below="@+id/v_separator"
+            android:layout_marginTop="40dp"
+            android:text="@string/btn_New_Seller"
+            android:textColor="@color/colorPrimary"
+            android:clickable="true"
+            android:padding="8dp"/>
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>
